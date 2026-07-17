@@ -2,8 +2,11 @@
 
 A simple, accessible feedback form built with plain HTML, CSS, and JavaScript. Interns can submit feedback about their week — the form validates input on the client side, sends it to a mock REST API, and clearly shows loading, success, or error states.
 
-**Live Demo:** [your-vercel-link-here](https://intern-feedback-form.vercel.app/)
+# Intern Feedback Form
 
+**Live Demo:** [intern-feedback-form](https://intern-feedback-form.vercel.app/)
+
+A simple, accessible feedback form built with plain HTML, CSS, and JavaScript...
 ## Features
 
 - Fully accessible form with linked labels for every field
