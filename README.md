@@ -30,12 +30,15 @@ This task gave me hands-on experience connecting a frontend form to a real REST 
 ## Screenshots
 
 **Validation errors:**
+
 ![Validation errors](screenshots/invalid_submit.png)
 
 **Success message:**
+
 ![Success message](screenshots/valid_data.png)
 
 **Latest Feedbacks:**
+
 ![Latest Feedbacks](screenshots/latest_feedbacks.png)
 
 ## Tech Used
