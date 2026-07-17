@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intern Feedback Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="form-card" aria-labelledby="page-title">
+        <div class="card-header">
+          <p class="eyebrow">Intern Feedback</p>
+          <h1 id="page-title">Share your experience</h1>
+          <p class="subtitle">
+            Use this form to submit general feedback, report a bug, or send a suggestion.
+          </p>
+        </div>
+
+        <div id="statusMessage" class="status-message" role="status" aria-live="polite"></div>
+
+        <form id="feedbackForm" novalidate>
+          <div class="field-group">
+            <label id="fullNameLabel" for="fullName">Full Name</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              autocomplete="name"
+              placeholder="Enter your full name"
+              required
+            />
+            <p class="field-error" id="fullNameError" aria-live="polite"></p>
+          </div>
+
+          <div class="field-group">
+            <label id="emailLabel" for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              placeholder="name@example.com"
+              required
+            />
+            <p class="field-error" id="emailError" aria-live="polite"></p>
+          </div>
+
+          <div class="field-group">
+            <label id="categoryLabel" for="category">Category</label>
+            <select id="category" name="category" required>
+              <option value="">Select a category</option>
+              <option value="General">General</option>
+              <option value="Bug report">Bug report</option>
+              <option value="Suggestion">Suggestion</option>
+            </select>
+            <p class="field-error" id="categoryError" aria-live="polite"></p>
+          </div>
+
+          <fieldset class="field-group rating-group">
+            <legend id="ratingLegend">Rating</legend>
+            <div class="rating-options" role="radiogroup" aria-labelledby="ratingLegend">
+              <div class="rating-option">
+                <input type="radio" id="rating1" name="rating" value="1" required />
+                <label id="rating1Label" for="rating1">1</label>
+              </div>
+              <div class="rating-option">
+                <input type="radio" id="rating2" name="rating" value="2" />
+                <label id="rating2Label" for="rating2">2</label>
+              </div>
+              <div class="rating-option">
+                <input type="radio" id="rating3" name="rating" value="3" />
+                <label id="rating3Label" for="rating3">3</label>
+              </div>
+              <div class="rating-option">
+                <input type="radio" id="rating4" name="rating" value="4" />
+                <label id="rating4Label" for="rating4">4</label>
+              </div>
+              <div class="rating-option">
+                <input type="radio" id="rating5" name="rating" value="5" />
+                <label id="rating5Label" for="rating5">5</label>
+              </div>
+            </div>
+            <p class="field-error" id="ratingError" aria-live="polite"></p>
+          </fieldset>
+
+          <div class="field-group">
+            <div class="field-header-row">
+              <label id="messageLabel" for="message">Message</label>
+              <span class="char-counter" id="messageCounter">0 / 500</span>
+            </div>
+            <textarea
+              id="message"
+              name="message"
+              rows="7"
+              maxlength="500"
+              placeholder="Tell us what worked, what didn’t, or what should change..."
+              required
+            ></textarea>
+            <p class="field-error" id="messageError" aria-live="polite"></p>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" id="submitButton">Submit feedback</button>
+            <span id="loadingIndicator" class="loading-indicator" aria-live="polite" hidden>
+              Sending feedback...
+            </span>
+          </div>
+        </form>
+      </section>
+
+      <section class="posts-card" aria-labelledby="feedback-title">
+        <div class="section-header">
+          <h2 id="feedback-title">Latest Feedback</h2>
+          <p>Showing the most recent feedback submitted during this session.</p>
+        </div>
+        <div id="feedbackStatus" class="status-message secondary" role="status" aria-live="polite"></div>
+        <ul id="feedbackList" class="posts-list" aria-live="polite"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
